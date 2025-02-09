@@ -6,7 +6,7 @@ public class SphereMove : MonoBehaviour
 {
     private Rigidbody _sphereRB;
     private Transform _transformStart;
-    private Animation _sphereAnimation;
+    private Animator _sphereAnimation;
     private void Start()
     {
         _transformStart = _sphereRB.transform;
@@ -16,7 +16,7 @@ public class SphereMove : MonoBehaviour
     {
         if(_sphereRB.position != _transformStart.position)
         {
-            
+       
         }
     }
 }
