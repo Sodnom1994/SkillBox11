@@ -26,5 +26,4 @@ public class AnimatorController : MonoBehaviour
     {
         return _randomCounterForAnimator = Random.Range(0, 3);
     }    
-
 }

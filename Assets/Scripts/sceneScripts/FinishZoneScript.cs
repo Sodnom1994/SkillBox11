@@ -24,8 +24,7 @@ public class FinishZoneScript : MonoBehaviour
             _collisionDetecter = false;
         }
     }
-
-    IEnumerator TimerToNextLevel()
+        IEnumerator TimerToNextLevel()
     {
         Debug.Log("Корутина запущена");
         yield return new WaitForSeconds(3);

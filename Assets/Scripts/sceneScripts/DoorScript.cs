@@ -11,5 +11,4 @@ public class DoorScript : MonoBehaviour
     {
         doorAnimator.SetBool("ButtonPressed", false);
     }
-
 }
