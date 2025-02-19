@@ -5,8 +5,10 @@ using UnityEngine;
 public class DeathTrigger : MonoBehaviour
 {
     public ParticleSystem deathAnimation;
+    
     private void OnDestroy()
     {
         deathAnimation.Play();
+        
     }
 }
