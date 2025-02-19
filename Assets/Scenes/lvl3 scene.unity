@@ -7168,7 +7168,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -50879,7 +50879,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -65391,7 +65391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef061ba92dd92948b86fa4713d252d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverPanel: {fileID: 0}
+  gameOverPanel: {fileID: 1245637154}
+  deathParticle: {fileID: 278938344}
 --- !u!65 &1791091405
 BoxCollider:
   m_ObjectHideFlags: 0
