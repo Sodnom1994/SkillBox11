@@ -6,7 +6,8 @@ using UnityEngine.UIElements;
 
 public class DeadZoneTrigger : MonoBehaviour
 {
-    public GameObject _gameOverPanel;
+    public GameObject gameOverPanel;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -15,9 +16,10 @@ public class DeadZoneTrigger : MonoBehaviour
         }
         IEnumerator GameOver(Collider other)
         {
+            
             Destroy(other.gameObject);
             yield return new WaitForSeconds(2);
-            _gameOverPanel.SetActive(true);
+            gameOverPanel.SetActive(true);
         }
     }
 }
