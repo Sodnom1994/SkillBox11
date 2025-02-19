@@ -7,11 +7,10 @@ using UnityEngine.UIElements;
 public class DeadZoneTrigger : MonoBehaviour
 {
     public GameObject gameOverPanel;
-    public ParticleSystem deathParticle;
-
+    
     private void Start()
     {
-        if(gameOverPanel == null || deathParticle ==null)
+        if(gameOverPanel == null)
         {
             Debug.LogError("Проверь компонент у объекта");
         }    
@@ -24,7 +23,6 @@ public class DeadZoneTrigger : MonoBehaviour
         }
         IEnumerator GameOver(Collider other)
         {
-            deathParticle.Play();
             Destroy(other.gameObject);
             yield return new WaitForSeconds(2);
             gameOverPanel.SetActive(true);
