@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class deathtriggerplayer : MonoBehaviour
 {
+    public GameObject Player;
     public ParticleSystem ParticleSystem;
     private void Start()
     {
@@ -14,6 +15,9 @@ public class deathtriggerplayer : MonoBehaviour
     }
     private void OnDestroy()
     {
+        if(gameObject.CompareTag("player"))
+        {
         ParticleSystem.Play();
+        }
     }
 }

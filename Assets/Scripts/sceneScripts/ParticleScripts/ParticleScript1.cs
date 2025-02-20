@@ -7,7 +7,9 @@ public class ParticleScript1 : MonoBehaviour
     public ParticleSystem _particle1;
     private void OnTriggerStay(Collider other)
     {
-        _particle1.Play();
+        if (other.gameObject.CompareTag("player"))
+        {
+            _particle1.Play();
+        }
     }
-    
 }
