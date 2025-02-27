@@ -7,6 +7,7 @@ TagManager:
   - DeathTrigger
   - obsticle
   - landscape
+  - DeathZone
   layers:
   - Default
   - TransparentFX

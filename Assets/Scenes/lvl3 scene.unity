@@ -7055,10 +7055,9 @@ GameObject:
   - component: {fileID: 278938342}
   - component: {fileID: 278938344}
   - component: {fileID: 278938343}
-  - component: {fileID: 278938345}
   m_Layer: 8
   m_Name: testForParticle
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7071,12 +7070,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278938341}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1245637155}
+  m_Father: {fileID: 1506059159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &278938343
 ParticleSystemRenderer:
@@ -7160,7 +7159,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278938341}
   serializedVersion: 8
-  lengthInSec: 1
+  lengthInSec: 8
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -7169,7 +7168,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -7235,8 +7234,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
-      minScalar: 1
+      scalar: 6
+      minScalar: 6
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -11933,20 +11932,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &278938345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278938341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fe74ddea48356144b27d2963b447b3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1245637154}
-  ParticleSystem: {fileID: 278938344}
 --- !u!1 &303271420
 GameObject:
   m_ObjectHideFlags: 0
@@ -50537,7 +50522,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 262248995}
-  m_VersionIndex: 3776
+  m_VersionIndex: 3779
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -50657,6 +50642,7 @@ GameObject:
   - component: {fileID: 1245637156}
   - component: {fileID: 1245637163}
   - component: {fileID: 1245637162}
+  - component: {fileID: 1245637164}
   m_Layer: 8
   m_Name: Sphere
   m_TagString: Player
@@ -50676,8 +50662,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -2.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 278938342}
+  m_Children: []
   m_Father: {fileID: 1506059159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1245637156
@@ -50885,7 +50870,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245637154}
   serializedVersion: 8
-  lengthInSec: 2
+  lengthInSec: 4
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -55600,6 +55585,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &1245637164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245637154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe74ddea48356144b27d2963b447b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ParticleSystem: {fileID: 278938344}
 --- !u!1 &1297994192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1985636175768481408, guid: 93bb5416f5190b74eb2ba17e0cd1d1a3, type: 3}
@@ -60466,6 +60464,7 @@ Transform:
   m_Children:
   - {fileID: 303271421}
   - {fileID: 1245637155}
+  - {fileID: 278938342}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1515380762
@@ -65309,7 +65308,7 @@ GameObject:
   - component: {fileID: 1546427208}
   m_Layer: 0
   m_Name: DeadZone
-  m_TagString: Untagged
+  m_TagString: DeathZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65379,7 +65378,7 @@ GameObject:
   - component: {fileID: 1791091404}
   m_Layer: 0
   m_Name: TriggerGameOverBox
-  m_TagString: Untagged
+  m_TagString: DeathZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
