@@ -5,20 +5,30 @@ using UnityEngine;
 
 public class Deathtriggerplayer : MonoBehaviour
 {
-    public ParticleSystem ParticleSystem;
-    private void Start()
+    public ParticleSystem deathParticleSystem;
+    public GameObject player;
+    private bool deathCheck = false;
+    private void Update()
     {
-        if (ParticleSystem == null)
+        if (player != null)
         {
-            Debug.LogError("Проверь компонент");
+            gameObject.transform.position = player.transform.position;
+        }
+        else
+        {
+            if (!deathCheck)
+            {
+                deathCheck = true;
+                Debug.Log("1");
+                DeathParticleActive();
+            }
         }
     }
-    private void OnDestroy()
+    private void DeathParticleActive()
     {
-
-        Debug.Log("!");
-        ParticleSystem.Play();
-
+        deathParticleSystem.Play();
+        Debug.Log("2");
     }
+
 
 }

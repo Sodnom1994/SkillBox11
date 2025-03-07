@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class DeadZoneTrigger : MonoBehaviour
 {
     public GameObject gameOverPanel;
+    public bool playerCheck;
     private void Start()
     {
         if (gameOverPanel == null)
@@ -18,6 +19,7 @@ public class DeadZoneTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            
             StartCoroutine(GameOver(other));
         }
     }
@@ -26,5 +28,6 @@ public class DeadZoneTrigger : MonoBehaviour
         Destroy(other.gameObject);
         yield return new WaitForSeconds(2);
         gameOverPanel.SetActive(true);
+        
     }
 }
