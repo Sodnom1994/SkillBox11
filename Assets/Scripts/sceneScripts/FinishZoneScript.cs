@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class FinishZoneScript : MonoBehaviour
 {
     private bool _collisionDetecter = false;
+    public GameObject WinScreen;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -21,20 +22,25 @@ public class FinishZoneScript : MonoBehaviour
             Debug.Log("Переход на след. уровень");
             Debug.Log($"SceneManager.GetActiveScene().buildIndex = {SceneManager.GetActiveScene().buildIndex}");
             Debug.Log($"SceneManager.GetActiveScene().buildIndex + 1 = {SceneManager.GetActiveScene().buildIndex + 1}");
+            Debug.Log($"SceneManager.sceneCountInBuildSettings = {SceneManager.sceneCountInBuildSettings}");
+
             _collisionDetecter = false;
         }
     }
-        IEnumerator TimerToNextLevel()
+    IEnumerator TimerToNextLevel()
     {
         Debug.Log("Корутина запущена");
         yield return new WaitForSeconds(3);
-        if (SceneManager.GetActiveScene().buildIndex + 1 > SceneManager.sceneCountInBuildSettings)
+        if (SceneManager.GetActiveScene().buildIndex + 1 == SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene("Main menu scene");
+            Debug.Log("!");
+            WinScreen.SetActive(true);
         }
         else
         {
+            Debug.Log("oops");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+
 }
