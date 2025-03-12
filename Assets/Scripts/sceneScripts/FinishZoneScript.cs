@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class FinishZoneScript : MonoBehaviour
 {
     private bool _collisionDetecter = false;
-    public GameObject WinScreen;
+    public GameObject winScreen;
+    public ParticleSystem fireworkParticle;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -34,7 +35,8 @@ public class FinishZoneScript : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex + 1 == SceneManager.sceneCountInBuildSettings)
         {
             Debug.Log("!");
-            WinScreen.SetActive(true);
+            winScreen.SetActive(true);
+            fireworkParticle.Play();
         }
         else
         {
