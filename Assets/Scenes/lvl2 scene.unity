@@ -10283,7 +10283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d10469e099d2c4281d81e1b6f27906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinScreen: {fileID: 0}
+  winScreen: {fileID: 0}
+  fireworkParticle: {fileID: 0}
 --- !u!65 &5600966202618199981
 BoxCollider:
   m_ObjectHideFlags: 0

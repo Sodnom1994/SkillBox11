@@ -16,7 +16,7 @@ public class ObstaclesTypeBridgeScript : MonoBehaviour
         {
             _isPlayerinBridgeZone = true;
             bridgeButtonPanel.SetActive(true);
-            Debug.Log("PlayerHere");
+            //Debug.Log("PlayerHere");
         }
     }
     private void OnTriggerExit(Collider other)
